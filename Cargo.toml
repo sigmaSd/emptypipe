@@ -3,5 +3,9 @@ name = "emptypipe"
 version = "0.1.0"
 authors = ["Nbiba Bedis <bedisnbiba@gmail.com>"]
 edition = "2018"
+readme = "README.md"
+description = "Run a command if stdin is empty"
+repository = "https://github.com/sigmaSd/emptypipe"
+license = "MIT"
 
 [dependencies]
