@@ -17,11 +17,13 @@ fn main() -> io::Result<()> {
     if buffer.trim().is_empty() && !inv {
         Command::new(env::args().nth(1).expect("No command given"))
             .args(&env::args().skip(2).collect::<Vec<String>>())
-            .spawn()?;
+            .spawn()?
+            .wait()?;
     } else if !buffer.trim().is_empty() && inv {
         Command::new(env::args().nth(2).expect("No command given"))
             .args(&env::args().skip(3).collect::<Vec<String>>())
-            .spawn()?;
+            .spawn()?
+            .wait()?;
     } else {
         print!("{}", &buffer);
     }
